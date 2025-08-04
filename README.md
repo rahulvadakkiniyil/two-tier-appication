@@ -130,4 +130,10 @@ docker run -d \
 
 ```bash
 docker logs <container-id>
+```
+# Reference
+https://www.youtube.com/watch?v=dXUnAK9_ets&list=PLlfy9GnSVerRpz3u8casjjv1eNJr9tlR9&index=1
+https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+https://kubernetes.io/docs/concepts/services-networking/service/
+https://docs.google.com/document/d/1nlDc1yE0ebp5ZD37MIvR_kct4spPmBL8ul5DyQvAaCY/edit?tab=t.0
 
