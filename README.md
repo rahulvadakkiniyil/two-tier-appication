@@ -3,6 +3,8 @@
 
 This is a simple Flask app that interacts with a MySQL database. The app allows users to submit messages, which are then stored in the database and displayed on the frontend.
 
+![Flask App Screenshot](images/flaskapp.png)
+
 ## Prerequisites
 
 Before you begin, make sure you have the following installed:
@@ -126,5 +128,6 @@ docker run -d \
 
 - If you encounter issues, check Docker logs and error messages for troubleshooting.
 
-```
+```bash
+docker logs <container-id>
 
