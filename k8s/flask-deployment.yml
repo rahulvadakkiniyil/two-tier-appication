@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: two-tier-app
+  name: flask-deployment
   labels:
     app: two-tier-app
 spec:
@@ -15,11 +15,11 @@ spec:
         app: two-tier-app
     spec:
       containers:
-        - name: two-tier-app
+        - name: flask-ctr
           image: rahulv1996/flask-app:latest
           env:
             - name: MYSQL_HOST
-              value: "10.106.160.79"          # this is your mysql's service clusture IP, Make sure to change it with yours
+              value: "10.110.91.90"
             - name: MYSQL_PASSWORD
               value: "admin"
             - name: MYSQL_USER
@@ -27,5 +27,5 @@ spec:
             - name: MYSQL_DB
               value: "mydb"
           ports:
-            - containerPort: 5000
+           - containerPort: 5000
           imagePullPolicy: Always
