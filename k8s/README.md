@@ -38,6 +38,7 @@ Use this repository to setup kubeadm [https://github.com/LondheShubham153/kubest
 ```bash
    kubectl apply -f mysql-pvc.yml
    ```
-**To setup Helm in your server **
+# To setup HELM
+
 Use this repository to set-up helm [https://github.com/LondheShubham153/kubestarter/tree/main/HELM]
 
