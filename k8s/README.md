@@ -8,8 +8,8 @@ Use this repository to setup kubeadm [https://github.com/LondheShubham153/kubest
 ## Setup
 
 1) First clone the code to your machine
-   ```bash
-   git clone https://github.com/LondheShubham153/two-tier-flask-app.git
+```bash
+  git clone https://github.com/LondheShubham153/two-tier-flask-app.git
    ```
 2)Move to k8s directory
  ```bash
