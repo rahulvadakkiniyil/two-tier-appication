@@ -36,7 +36,7 @@ helm package .
 Install the Helm chart:
 ```bash
 
-helm install apache ./apache --namespace apache-namespace --create-namespace
+helm install flaskapp-chart ./flaskapp-chart
 ```
 Default Configuration
 The chart deploys an Apache HTTP Server with the following default values (from values.yaml):
@@ -68,13 +68,13 @@ Accessing the Deployment
 Check the status of your pods and services:
 ```bash
 
-kubectl get pods -n apache-namespace
-kubectl get svc -n apache-namespace
+kubectl get pods
+kubectl get svc
 ```
 Forward the service port to access Apache locally:
 ```bash
 
-kubectl port-forward svc/apache 8080:80 -n apache-namespace
+kubectl port-forward svc/flaskapp 8080:80
 ```
 Open your browser and visit:
 ```arduino
@@ -86,19 +86,18 @@ To remove the deployment and associated resources:
 
 ```bash
 
-helm uninstall apache -n apache-namespace
-kubectl delete namespace apache-namespace
+helm uninstall flaskapp-chart
+kubectl delete all
 ```
 Customizing the Chart
 You can override default values using the --set flag. For example:
 
 ```bash
 
-helm install apache ./apache \
-  --namespace apache-namespace \
+helm install flaskapp-chart ./flaskapp-chart \
   --set replicaCount=3 \
-  --set image.tag=2.4.53 \
-  --set service.type=LoadBalancer
+  --set image.tag=latest\
+  --set service.type=NodePort
 ```
 Alternatively, modify the values.yaml file directly.
 
@@ -118,10 +117,10 @@ kubectl version
 Check Helm release status:
 ```bash
 
-helm status apache -n apache-namespace
+helm status 
 ```
 Inspect pod logs:
 ```bash
 
-kubectl logs <apache-pod-name> -n apache-namespace
+kubectl logs <container-id> 
 ```
